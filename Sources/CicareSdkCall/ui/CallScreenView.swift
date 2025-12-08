@@ -316,13 +316,18 @@ public class CallScreenViewController: UIViewController {
         titleStack.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(titleStack)
         
+        nameLabel.text = calleeName
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        nameLabel.textColor = .black
+        nameLabel.textAlignment = .center
+        
         statusLabel.text = self.metaData["call_\(callStatus)"] ?? callStatus
         statusLabel.font = UIFont.systemFont(ofSize: 16)
         statusLabel.textColor = .black
         statusLabel.textAlignment = .center
         
         // Stack setup for labels
-        let statusStack = UIStackView(arrangedSubviews: [statusLabel])
+        let statusStack = UIStackView(arrangedSubviews: [nameLabel, statusLabel])
         statusStack.axis = .vertical
         statusStack.spacing = 8
         statusStack.alignment = .center
@@ -342,17 +347,12 @@ public class CallScreenViewController: UIViewController {
             }
         }
         
-        nameLabel.text = calleeName
-        nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
-        nameLabel.textColor = .black
-        nameLabel.textAlignment = .center
-        
         connectionLabel.text = ""
         connectionLabel.font = UIFont.systemFont(ofSize: 14)
         connectionLabel.textColor = .red
         connectionLabel.textAlignment = .center
         
-        let nameLabelStack = UIStackView(arrangedSubviews: [nameLabel, connectionLabel])
+        let nameLabelStack = UIStackView(arrangedSubviews: [connectionLabel])
         nameLabelStack.axis = .vertical
         nameLabelStack.spacing = 8
         nameLabelStack.alignment = .center
@@ -501,22 +501,9 @@ public class CallScreenViewController: UIViewController {
         }
         speakerButton.widthAnchor.constraint(equalToConstant: 64).isActive = true
         
-        /*let messageButton = CircleIconButton(
-            icon: compatibleImage(named: "message", systemName: "message"),
-            labelText: self.metaData["call_btn_message"] ?? "Message",
-            iconColor: UIColor(hex: "17666A")!,
-            backgroundColor: UIColor(hex: "E9F8F9")!
-        ) {
-            self.onMessageClicked?()
-            if CallState.shared.currentCallUUID != nil {
-                CallService.sharedInstance.declineCall()
-            }
-        }
-        messageButton.widthAnchor.constraint(equalToConstant: 64).isActive = true*/
-        
         let audioButtonStack = UIStackView(arrangedSubviews: [speakerButton, muteButton/*, messageButton*/])
         audioButtonStack.axis = .horizontal
-        audioButtonStack.spacing = 100
+        audioButtonStack.spacing = 150
         audioButtonStack.distribution = .fillEqually
         audioButtonStack.alignment = .center
         audioButtonStack.translatesAutoresizingMaskIntoConstraints = false
@@ -604,7 +591,7 @@ public class CallScreenViewController: UIViewController {
         
         let audioButtonStack = UIStackView(arrangedSubviews: [speakerButton, muteButton])
         audioButtonStack.axis = .horizontal
-        audioButtonStack.spacing = 100
+        audioButtonStack.spacing = 150
         audioButtonStack.distribution = .fillEqually
         audioButtonStack.alignment = .center
         audioButtonStack.translatesAutoresizingMaskIntoConstraints = false
