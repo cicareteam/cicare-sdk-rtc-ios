@@ -21,9 +21,7 @@ Pod::Spec.new do |spec|
 
   # Jika menggunakan source code
   spec.source_files = "Sources/CicareSdkCall/**/*.{swift,h,m}"
-  spec.resource_bundles = {
-    'CiCareSDKRTC' => ['Sources/CicareSdkCall/Media.xcassets']
-  }
+  spec.resources = ['Sources/CicareSdkCall/Media.xcassets']
 
 
   # If use Framework binary
