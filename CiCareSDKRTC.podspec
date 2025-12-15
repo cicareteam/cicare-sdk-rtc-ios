@@ -20,8 +20,8 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/cicareteam/cicare-sdkcall-ios.git", :tag => spec.version.to_s }
 
   # Jika menggunakan source code
-  spec.source_files = "Sources/CicareSdkCall/**/*.{swift,h,m}"
-  spec.resources = ['Sources/CicareSdkCall/Media.xcassets']
+  spec.source_files = "Sources/CicareSdkCall/**/*.{swift,h,m,xcassets}"
+  # spec.resources = ['Sources/CicareSdkCall/Media.xcassets']
 
 
   # If use Framework binary
