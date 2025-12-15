@@ -36,6 +36,7 @@ Pod::Spec.new do |spec|
   spec.dependency "CryptoSwift", "1.8.4"
   
   # Build setting for module stability
+  spec.static_framework = true
   spec.pod_target_xcconfig = {
     "BUILD_LIBRARY_FOR_DISTRIBUTION" => "YES",
     "IPHONEOS_DEPLOYMENT_TARGET" => "12.0"
