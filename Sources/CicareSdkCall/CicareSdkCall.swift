@@ -4,9 +4,9 @@ import Foundation
 import AVFoundation
 import SwiftUI
 
-public class CiCareSDKRTC: CallEventListener {
+public class CicareSdkCall: CallEventListener {
     
-    public static let shared: CiCareSDKRTC = CiCareSDKRTC()
+    public static let shared: CicareSdkCall = CicareSdkCall()
     
     private var vc: UIViewController?
     
