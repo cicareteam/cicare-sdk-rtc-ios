@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.version      = "1.2.1-rc.2"
   spec.summary      = "SDK for calling app to app webrtc."
   spec.description  = <<-DESC
-    CiCareSDKCall is a SDK for calling app to app or app to phone via webrtc.
+    CiCareSDKRTC is a SDK for calling app to app or app to phone via webrtc.
   DESC
   spec.homepage     = "https://github.com/cicareteam/cicare-sdk-rtc-ios"
   spec.license      = { :type => "Commercial", :file => "LICENSE" }
@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   # Jika menggunakan source code
   spec.source_files = "Sources/CicareSdkCall/**/*.{swift,h,m}"
   spec.resource_bundles = {
-    'CiCareSDKCall' => ['Sources/CicareSdkCall/Media.xcassets']
+    'CiCareSDKRTC' => ['Sources/CicareSdkCall/Media.xcassets']
   }
 
 
@@ -38,7 +38,7 @@ Pod::Spec.new do |spec|
   # Build setting for module stability
   spec.static_framework = true
   spec.pod_target_xcconfig = {
-    "BUILD_LIBRARY_FOR_DISTRIBUTION" => "YES",
+    "BUILD_LIBRARY_FOR_DISTRIBUTION" => "NO",
     "IPHONEOS_DEPLOYMENT_TARGET" => "12.0"
   }
 end
