@@ -2,14 +2,14 @@
 
 
 Pod::Spec.new do |spec|
-  spec.name         = "CiCareSDKCallIOS"
-  spec.module_name  = "CiCareSDKCall"
-  spec.version      = "1.2.1-rc.35"
+  spec.name         = "CiCareSDKRTC"
+  spec.module_name  = "CiCareSDKRTC"
+  spec.version      = "1.2.1-rc.1"
   spec.summary      = "SDK for calling app to app webrtc."
   spec.description  = <<-DESC
     CiCareSDKCall is a SDK for calling app to app or app to phone via webrtc.
   DESC
-  spec.homepage     = "https://github.com/cicareteam/cicare-sdkcall-ios"
+  spec.homepage     = "https://github.com/cicareteam/cicare-sdk-rtc-ios"
   spec.license      = { :type => "Commercial", :file => "LICENSE" }
   spec.readme       = "https://raw.githubusercontent.com/cicareteam/cicare-sdkcall-ios/refs/heads/main/README.md"
   spec.author       = { "C-icare Team" => "dev@c-icare.cc" }
