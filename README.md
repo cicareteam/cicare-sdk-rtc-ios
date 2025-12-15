@@ -13,7 +13,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'YourAppTarget' do
   use_frameworks!
-  pod 'CiCareSDKCallIOS', '1.2.1-rc.34'
+  pod 'CiCareSDKRTC', '1.2.1-rc.2'
 end
 ````
 
@@ -209,8 +209,8 @@ Error code list are:
 
 ## 🔗 References
 
-* CocoaPods: [https://cocoapods.org/pods/CiCareSDKCallIOS](https://cocoapods.org/pods/CiCareSDKCallIOS)
-* Latest version: **1.2.1-rc.34**
+* CocoaPods: [https://cocoapods.org/pods/CiCareSDKRTC](https://cocoapods.org/pods/CiCareSDKRTC)
+* Latest version: **1.2.1-rc.2**
 * Apple Docs:
 
   * [Push Notifications](https://developer.apple.com/documentation/usernotifications)
